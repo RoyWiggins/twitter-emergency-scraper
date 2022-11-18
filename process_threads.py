@@ -51,6 +51,7 @@ while go:
     item = next(t)
     url = item["link"]
     id = url.split("/")[-1].replace("#m","")
+    ( base_path / f"threads" ).mkdir(exists_ok=True)
     with open(base_path / f"threads/thread.{id}.html", "w", encoding="utf-8") as f:
         for line in template:
             if "TIMELINE" in line:

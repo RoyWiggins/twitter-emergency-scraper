@@ -1,8 +1,17 @@
 # An emergency scraper for Twitter, using Nitter
  
-This was developed on Windows and will probably not work on elsewhere without some modification. 
+This was developed on Windows and will probably not work on elsewhere without some modification. It scrapes Nitter as a proxy for Twitter, which means it can get nice clean HTML representations of public tweets, along with downloading images. It first scrolls through as far down as it can on a user's profile, and therafter tries to use a Search query to retrieve as many tweets as it can. It absolutely *will not* get everything, but it's what's available. 
 
-The code quality is awful. I don't really know how to use Scrapy.
+It can handle images, but not most videos. 
+
+It produces both json output and will output Nitter html, including rewriting images to point to your local copies. The results are good when it works:
+![image](https://user-images.githubusercontent.com/5290850/202627882-3fb85a04-9820-4527-8d3e-d691da0fb958.png)
+
+Once you have a scrape result, *copy it somewhere safe*. This code is entirely willing to overwrite previously-generated stuff or append to an existing scrape.
+
+Caveat: the code quality is awful. I don't really know how to use Scrapy. I wrote this in a couple hours. 
+
+# Usage
 
 First, set the username (`TWITTER_USERNAME = "<USERNAME>"`) in `nitter-scrape/settings.py` to the user you want. This is CASE SENSITIVE but there will be no warnings. 
 

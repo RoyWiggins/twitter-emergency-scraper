@@ -16,7 +16,7 @@ Caveat: the code quality is awful. I don't really know how to use Scrapy. I wrot
 First, set the username (`TWITTER_USERNAME = "<USERNAME>"`) in `nitter-scrape/settings.py` to the user you want. This is CASE SENSITIVE but there will be no warnings. 
 
 # Initial crawl
-Set the current working directory to where you checked the repository out.
+Set the current working directory to the top level of the repository.
 
 To start crawling, run
 

@@ -57,7 +57,7 @@ Edit FEEDS in `nitter-scrape/settings.py` to read
     TWITTER_USERNAME+"\\items_threads.json": {
 	...
 ```
-If you don't do this, you will overwrite your existing `items.json`. 
+If you don't do this, you will might overwrite your existing `items.json`, or at the very least start *appending* to it, which you'd have to untangle manually.
 
 Run `scrapy crawl thread_spider`. You can set the following options like above:
 
